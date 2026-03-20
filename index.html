@@ -1,1 +1,154 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennesaw church of Christ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span>KC</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Kennesaw church of Christ</span>
+            <span class="brand-subtitle">Following Christ in Kennesaw</span>
+          </div>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <a href="#service" class="nav-cta">Join Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main>
+        <!-- Hero -->
+        <section class="hero full-viewport">
+          <div class="hero-content">
+            <h1>Kennesaw church of Christ</h1>
+            <p class="hero-tagline">Following Christ in Kennesaw</p>
+            <div class="hero-quick-info">
+              <div class="quick-info-item">
+                <span>Sunday 9:30 AM</span>
+              </div>
+              <div class="quick-info-item">
+                <span>2871 Cherokee St NW</span>
+              </div>
+            </div>
+            <a href="#service" class="hero-button">Join Us Sunday</a>
+          </div>
+          <div class="hero-side">
+            <p>
+              We are a warm, small community committed to following Jesus and encouraging one
+              another in faith. Whether you're visiting for the first time or looking for a church
+              home, we would love to meet you.
+            </p>
+            <div class="scroll-indicator">
+              <div class="scroll-arrow"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Service times -->
+        <section class="section" id="service">
+          <h2>Service times</h2>
+          <p>Join us each week for worship and Bible study.</p>
+
+          <div class="service-card">
+            <div>
+              <div class="service-item-label">Sunday morning</div>
+              <div class="service-item-main">9:30 AM</div>
+            </div>
+            <div>
+              <div class="service-item-label">Wednesday evening</div>
+              <div class="service-item-main">7:00 PM</div>
+            </div>
+            <div>
+              <div class="service-item-label">Location</div>
+              <div class="service-item-main">2871 Cherokee St NW, Kennesaw, GA 30144</div>
+              <div class="service-item-sub">In the 1808 building across from Lazy Labrador Coffee House</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Embedded map -->
+        <section class="section" id="map">
+          <h2>Find us</h2>
+          <p>Get directions to our location in the historic 1808 building</p>
+          <div class="map-wrapper">
+            <div id="map" style="width: 100%; height: 350px; border-radius: 12px;"></div>
+          </div>
+        </section>
+        
+        <!-- Map CTA section -->
+        <section class="map-cta-section">
+          <a href="https://www.google.com/maps/search/?api=1&query=2871+Cherokee+St+NW+Kennesaw+GA+30144" target="_blank" class="maps-button">
+            Open in Google Maps
+          </a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>
+          &copy; <span id="year"></span> <strong>Kennesaw church of Christ</strong><br />
+          2871 Cherokee St NW, Kennesaw, GA 30144<br />
+          404-330-2646 &middot; <a href="mailto:kennesawchurchofchrist@gmail.com">kennesawchurchofchrist@gmail.com</a>
+        </span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="mailto:kennesawchurchofchrist@gmail.com">Email</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Initialize Leaflet map with minimal white theme
+      const map = L.map('map').setView([34.023984199999994, -84.61330949818941], 17);
+      
+      // Use a minimal tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 19
+      }).addTo(map);
+
+      // Create custom icon
+      const customIcon = L.divIcon({
+        html: '<div style="background-color: #37515F; width: 20px; height: 20px; border-radius: 50%; border: 3px solid #FFFFF2; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10, 10],
+        popupAnchor: [0, -10],
+        className: 'custom-marker'
+      });
+
+      // Add marker for church location (1808 building across from Lazy Labrador)
+      const marker = L.marker([34.023984199999994, -84.61330949818941], { icon: customIcon })
+        .addTo(map)
+        .bindPopup('<b>Kennesaw church of Christ</b><br>2871 Cherokee St NW<br>Kennesaw, GA 30144<br><br>In the 1808 building<br>across from Lazy Labrador Coffee House');
+    </script>
+  </body>
+</html>
