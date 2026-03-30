@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -42,7 +42,7 @@
         </nav>
       </div>
     </header>
-
+ 
     <div class="page">
       <main>
         <!-- Hero -->
@@ -71,12 +71,12 @@
             </div>
           </div>
         </section>
-
+ 
         <!-- Service times -->
         <section class="section" id="service">
           <h2>Service times</h2>
           <p>Join us each week for worship and Bible study.</p>
-
+ 
           <div class="service-card">
             <div>
               <div class="service-item-label">Sunday morning</div>
@@ -93,24 +93,24 @@
             </div>
           </div>
         </section>
-
-        <!-- Embedded map -->
-        <section class="section" id="map">
+ 
+        <!-- Embedded map — note: section id is "find-us"; the map div below has id="map" for Leaflet -->
+        <section class="section" id="find-us">
           <h2>Find us</h2>
-          <p>Get directions to our location in the historic 1808 building</p>
+          <p>Get directions to our location in the historic 1808 building.</p>
           <div class="map-wrapper">
             <div id="map" style="width: 100%; height: 350px; border-radius: 12px;"></div>
           </div>
         </section>
-        
-        <!-- Map CTA section -->
+ 
+        <!-- Map CTA -->
         <section class="map-cta-section">
           <a href="https://www.google.com/maps/search/?api=1&query=2871+Cherokee+St+NW+Kennesaw+GA+30144" target="_blank" class="maps-button">
             Open in Google Maps
           </a>
         </section>
       </main>
-
+ 
       <footer class="footer">
         <span>
           &copy; <span id="year"></span> <strong>Kennesaw church of Christ</strong><br />
@@ -123,20 +123,18 @@
         </div>
       </footer>
     </div>
-
+ 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-      
-      // Initialize Leaflet map with minimal white theme
+ 
+      // Initialize Leaflet map
       const map = L.map('map').setView([34.023984199999994, -84.61330949818941], 17);
-      
-      // Use a minimal tile layer
+ 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 19
       }).addTo(map);
-
-      // Create custom icon
+ 
       const customIcon = L.divIcon({
         html: '<div style="background-color: #37515F; width: 20px; height: 20px; border-radius: 50%; border: 3px solid #FFFFF2; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
         iconSize: [20, 20],
@@ -144,9 +142,8 @@
         popupAnchor: [0, -10],
         className: 'custom-marker'
       });
-
-      // Add marker for church location (1808 building across from Lazy Labrador)
-      const marker = L.marker([34.023984199999994, -84.61330949818941], { icon: customIcon })
+ 
+      L.marker([34.023984199999994, -84.61330949818941], { icon: customIcon })
         .addTo(map)
         .bindPopup('<b>Kennesaw church of Christ</b><br>2871 Cherokee St NW<br>Kennesaw, GA 30144<br><br>In the 1808 building<br>across from Lazy Labrador Coffee House');
     </script>
