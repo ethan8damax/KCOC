@@ -1,0 +1,250 @@
+/* =========================================================
+   Kennesaw Church of Christ — Foundations
+   Colors, typography, spacing, shadows, radii
+   ========================================================= */
+
+/* --- Fonts -------------------------------------------------
+   Loaded from Google Fonts via CDN. In a production build,
+   self-host these .woff2 files in /fonts to avoid the CDN.
+   ----------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap');
+
+:root {
+  /* ==========  COLOR  ============================================ */
+
+  /* Base neutrals — warm, paper-like */
+  --cream-50:  #FBF8F2;   /* page background */
+  --cream-100: #F5EFE4;   /* elevated surfaces / cards on dark */
+  --cream-200: #EDE4D1;   /* borders, dividers */
+  --cream-300: #D9CDB4;   /* hairline accents */
+
+  --ink-900: #1B2430;     /* primary text, near-black cooled slightly */
+  --ink-700: #35475C;     /* body text, aligns with brand blue */
+  --ink-500: #5C6B7C;     /* secondary text */
+  --ink-400: #7C8A99;     /* tertiary text / captions */
+  --ink-300: #A5AEB9;     /* disabled */
+
+  /* Brand — soft blue family */
+  --sage-900: #1E2A38;    /* deep navy */
+  --sage-800: #2A3B4F;    /* header bg — muted navy */
+  --sage-700: #3B5670;    /* primary brand blue */
+  --sage-500: #7D99B3;    /* muted soft blue (hover, borders on cream) */
+  --sage-100: #E2EAF2;    /* pale blue tint */
+
+  --walnut-900: #2C3A4A;  /* deep slate */
+  --walnut-700: #5A7390;  /* secondary slate-blue accent */
+  --walnut-500: #8AA3BD;
+  --walnut-300: #BCCEE0;
+
+  --gold-500: #B8935A;    /* soft gold accent (rare use, warm counterweight) */
+  --gold-300: #DDC8A3;
+
+  /* Semantic (sparingly) */
+  --success: #4E6B5F;
+  --warning: #B07A3B;
+  --error:   #8B3A3A;
+
+  /* =====  SEMANTIC SURFACES / FG  ================================ */
+  --bg:           var(--cream-50);
+  --bg-elevated:  #FFFFFF;
+  --bg-muted:     var(--cream-100);
+  --bg-dark:      var(--sage-800);
+  --bg-darker:    var(--sage-900);
+
+  --fg-1:         var(--ink-900);   /* headings */
+  --fg-2:         var(--ink-700);   /* body */
+  --fg-3:         var(--ink-500);   /* secondary */
+  --fg-4:         var(--ink-400);   /* tertiary, verse refs */
+  --fg-on-dark-1: var(--cream-50);
+  --fg-on-dark-2: var(--cream-200);
+  --fg-on-dark-3: #B9C3BC;
+
+  --border:       var(--cream-200);
+  --border-strong: var(--cream-300);
+  --border-dark:  rgba(255, 255, 255, 0.14);
+
+  /* ==========  TYPE  ============================================ */
+  --font-serif: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino', Georgia, serif;
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-hand:  'Caveat', 'Segoe Script', cursive;
+
+  /* Type scale — major third-ish, tuned for reading */
+  --fs-xs:   0.75rem;     /* 12 — small caps, verse refs */
+  --fs-sm:   0.875rem;    /* 14 — meta, captions */
+  --fs-base: 1rem;        /* 16 — body */
+  --fs-md:   1.125rem;    /* 18 — lead body */
+  --fs-lg:   1.375rem;    /* 22 — subheads */
+  --fs-xl:   1.75rem;     /* 28 — h3 */
+  --fs-2xl:  2.25rem;     /* 36 — h2 */
+  --fs-3xl:  3rem;        /* 48 — h1 */
+  --fs-4xl:  4rem;        /* 64 — display */
+  --fs-5xl:  5.5rem;      /* 88 — hero display */
+
+  --lh-tight: 1.1;
+  --lh-snug:  1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+  --lh-loose:  1.8;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;    /* small caps */
+
+  /* ==========  SPACING  ========================================= */
+  --space-1:  0.25rem;   /* 4 */
+  --space-2:  0.5rem;    /* 8 */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.5rem;    /* 24 */
+  --space-6:  2rem;      /* 32 */
+  --space-7:  3rem;      /* 48 */
+  --space-8:  4rem;      /* 64 */
+  --space-9:  6rem;      /* 96 */
+  --space-10: 8rem;      /* 128 */
+
+  --container: 1200px;
+  --container-narrow: 760px;   /* reading column */
+  --container-wide: 1440px;
+
+  /* ==========  RADII  =========================================== */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* ==========  SHADOWS  ========================================= */
+  /* Subtle, warm, low-contrast — never dramatic. Shadows suggest
+     paper and gentle elevation, not flashy UI. */
+  --shadow-xs: 0 1px 2px rgba(30, 42, 56, 0.05);
+  --shadow-sm: 0 2px 6px rgba(30, 42, 56, 0.07);
+  --shadow-md: 0 8px 24px rgba(30, 42, 56, 0.09);
+  --shadow-lg: 0 20px 48px rgba(30, 42, 56, 0.11);
+
+  /* ==========  MOTION  ========================================== */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);      /* gentle ease-out */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* =========================================================
+   SEMANTIC TYPE CLASSES — use these on real elements
+   ========================================================= */
+
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+  background: var(--bg);
+}
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, var(--fs-5xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.25rem, 4.5vw, var(--fs-3xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+h2, .h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3.5vw, var(--fs-2xl));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+h3, .h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--fg-3);
+}
+
+.lead {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+
+p, .body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+
+.caption, small {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+}
+
+.verse-ref {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--fg-4);
+}
+
+.scripture-long {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-lg);
+  line-height: var(--lh-loose);
+  color: var(--fg-1);
+}
+
+.scripture-short {
+  font-family: var(--font-hand);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--sage-700);
+}
+
+/* Focus ring — always visible, warm */
+:focus-visible {
+  outline: 2px solid var(--sage-700);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" role="img" aria-label="Kennesaw church of Christ">
+  <g transform="translate(14, 18)">
+    <rect x="17" y="0" width="4" height="44" fill="#3B5670"></rect>
+    <rect x="6" y="13" width="26" height="4" fill="#3B5670"></rect>
+  </g>
+  <text x="60" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#3B5670" letter-spacing="2.8" text-transform="uppercase">KENNESAW</text>
+  <text x="60" y="60" font-family="&#39;Cormorant Garamond&#39;, Georgia, serif" font-size="30" font-weight="500" fill="#1B2430">church of Christ</text>
+</svg>
