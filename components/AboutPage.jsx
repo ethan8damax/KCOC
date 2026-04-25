@@ -41,7 +41,7 @@ const AboutPage = () => (
         <hr className="divider" />
 
         <span className="eyebrow">Our beliefs</span>
-        <h2 style={{marginTop: 8}}>What we hold, and why.</h2>
+        <h2 style={{marginTop: 8}}>What we believe, and why.</h2>
 
         <h3>The Bible</h3>
         <p>
