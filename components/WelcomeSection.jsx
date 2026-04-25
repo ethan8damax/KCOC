@@ -1,5 +1,6 @@
 // WelcomeSection.jsx — warm welcome block on homepage (tweakable image)
 const WELCOME_IMAGES = {
+  sky:      'https://images.unsplash.com/photo-1596133675020-00e7642c4c8b?auto=format&fit=crop&w=1400&q=80',
   field:    'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80',
   meadow:   'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1400&q=80',
   porch:    'https://images.unsplash.com/photo-1509023464722-18d996393ca8?auto=format&fit=crop&w=1400&q=80',
@@ -10,6 +11,7 @@ const WELCOME_IMAGES = {
 };
 
 const WELCOME_ALT = {
+  sky:    'Blue sky with white clouds',
   field:  'A quiet open field at golden hour',
   meadow: 'A peaceful mountain meadow under soft light',
   porch:  'A calm sunlit porch with pale wood',
@@ -39,12 +41,8 @@ const WelcomeSection = ({ imageKey = 'field' }) => {
               A spiritual family, grounded in the Bible.
             </h2>
             <p className="lead" style={{marginBottom: 'var(--space-4)'}}>
-              The Kennesaw church of Christ seeks to follow New Testament Christianity —
+              The Kennesaw church of Christ seeks to follow New Testament Christianity. We are
               a local congregation striving to follow the pattern of the early church revealed in Scripture.
-            </p>
-            <p style={{marginBottom: 'var(--space-5)'}}>
-              We welcome everyone. Whether you've attended church your whole life or never walked into
-              one before, you'll find a seat, a warm greeting, and a community honest about following Christ.
             </p>
             <a href="#/about" className="btn btn-tertiary">Learn more about us</a>
           </div>

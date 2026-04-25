@@ -8,7 +8,7 @@ const BeliefsSnippet = () => {
     },
     {
       h: 'Jesus',
-      p: "Jesus is our Savior and guiding light. In the midst of life's chaos, we find our anchor in Christ — He is the focus and guiding force in all we do.",
+      p: "Jesus is our Savior and guiding light. In the midst of life's chaos, we find our anchor in Christ. He is the focus and guiding force in all we do.",
       ref: 'John 8:12',
     },
     {
@@ -24,7 +24,7 @@ const BeliefsSnippet = () => {
           <div className="eyebrow" style={{marginBottom: 'var(--space-4)'}}>What we believe</div>
           <h2>Simple truths, held firmly.</h2>
           <p className="lead" style={{marginTop: 16, maxWidth: 600}}>
-            We stick to the simple truth of the Bible — an unchanging treasure that has stood the test of time.
+            We treasure the unchanging truths of the Bible as the inspired Word of God.
           </p>
         </div>
         <div className="beliefs-grid">
@@ -37,7 +37,7 @@ const BeliefsSnippet = () => {
           ))}
         </div>
         <div style={{marginTop: 'var(--space-7)'}}>
-          <a href="#/about" className="btn btn-secondary">Read all our beliefs</a>
+          <a href="#/about" className="btn btn-secondary">Learn more</a>
         </div>
       </div>
     </section>

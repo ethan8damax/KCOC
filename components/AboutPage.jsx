@@ -3,13 +3,7 @@ const AboutPage = () => (
   <React.Fragment>
     <header className="page-head">
       <div className="container">
-        <span className="eyebrow">About the Kennesaw church of Christ</span>
-        <h1>Simple. Grounded. Welcoming.</h1>
-        <p className="lead">
-          We strive to be like the early church — independent, non-denominational, and
-          straightforward. Our goal is to faithfully follow God's word, without adding to it
-          or taking away from it.
-        </p>
+        <h1>About the Kennesaw church of Christ</h1>
       </div>
     </header>
 
@@ -18,8 +12,8 @@ const AboutPage = () => (
         <span className="eyebrow">Our mission</span>
         <h2 style={{marginTop: 8}}>Following Christ in Kennesaw.</h2>
         <p>
-          We are a local, independent congregation in Kennesaw, Georgia. We're not a denomination
-          or a franchise — just a spiritual family that gathers each week to worship God, study
+          We strive to be like the early church. faithfully following God's word, without adding to it
+          or taking away from it is our goal. We meet each week to worship God, study
           Scripture, share the Lord's Supper, and encourage one another to live as disciples of Jesus.
         </p>
         <p>
@@ -31,7 +25,7 @@ const AboutPage = () => (
         <hr className="divider" />
 
         <span className="eyebrow">How we're different</span>
-        <h2 style={{marginTop: 8}}>Not a denomination — a congregation.</h2>
+        <h2 style={{marginTop: 8}}>We are a congregation, not a denomination.</h2>
         <p>
           The Kennesaw church of Christ seeks to follow New Testament Christianity.
           Our goal is simple: to restore the faith and practice of the church described in the
@@ -39,8 +33,8 @@ const AboutPage = () => (
           the pattern of the early church revealed in Scripture.
         </p>
         <p>
-          Each local congregation is autonomous and governed only by Christ through His Word
-          — not by denominational councils or conventions. We reject human creeds and traditions
+          Each local congregation is autonomous and governed only by Christ through His Word,
+          not by denominational councils or conventions. We reject human creeds and traditions
           as sources of authority, and seek instead to follow Christ through His Word.
         </p>
 
@@ -74,7 +68,7 @@ const AboutPage = () => (
 
         <h3>Baptism</h3>
         <p>
-          Water baptism, by full immersion, is more than a symbol; it washes away our sins
+          Water baptism, by full immersion, washes away our sins
           <span className="verse-ref"> (Acts 2:38; Acts 22:16)</span>. This sacred act marks the
           beginning of a new spiritual journey <span className="verse-ref">(Romans 6:3–4)</span>.
         </p>
@@ -99,8 +93,8 @@ const AboutPage = () => (
     </section>
 
     <ScriptureQuote
-      text="Trust in the Lord with all your heart, and do not lean on your own understanding."
-      reference="Proverbs 3:5"
+      text="Those who worship Him must worship in Spirit and in Truth."
+      reference="John 4:24"
     />
 
     <section className="section">
@@ -109,8 +103,8 @@ const AboutPage = () => (
         <h2 style={{marginTop: 8}}>A path the New Testament lays out clearly.</h2>
         <p>
           Forgiveness is a gift we don't earn or deserve <span className="verse-ref">(Ephesians 2:8–9)</span>.
-          However, the New Testament provides a clear path — a series of steps — that guides us
-          in receiving it.
+          However, the New Testament provides a clear path that guides us
+          in receiving it and maintaining it.
         </p>
 
         <div className="steps">

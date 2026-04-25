@@ -10,7 +10,6 @@ const Hero = () => (
       <div className="hero-eyebrow">Following Christ in Kennesaw</div>
       <h1>Draw closer to God,<br/>together.</h1>
       <p className="hero-lead">
-        An independent, non-denominational congregation grounded in the Bible.
         We'd love to meet you this Sunday.
       </p>
       <div className="hero-cta">

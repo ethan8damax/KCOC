@@ -4,15 +4,13 @@ const Nav = ({ route }) => {
   const items = [
     { href: '#/', label: 'Home' },
     { href: '#/about', label: 'About' },
-    { href: '#/sermons', label: 'Sermons' },
-    { href: '#/visit', label: 'Visit' },
   ];
   return (
     <React.Fragment>
       <nav className="nav">
         <div className="container nav-inner">
           <a href="#/" onClick={() => setOpen(false)}>
-            <img src="./assets/logo.svg" alt="Kennesaw church of Christ" className="nav-logo" />
+            <img src="./assets/logo.svg" alt="Kennesaw Church of Christ" className="nav-logo" />
           </a>
           <div className="nav-links">
             {items.map(i => (

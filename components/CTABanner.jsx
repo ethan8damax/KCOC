@@ -5,7 +5,8 @@ const CTABanner = () => (
       <div>
         <div className="tag">This Sunday</div>
         <h2>We'd love to meet you this week.</h2>
-        <p>Worship at 10:30 AM. 2871 Cherokee St NW, Kennesaw, GA 30144. No need to register — just come.</p>
+        <p>Worship at 10:30 AM</p> 
+        <p>2871 Cherokee St NW, Kennesaw, GA 30144</p>
       </div>
       <a href="#/visit" className="btn btn-on-dark">Plan your visit</a>
     </div>

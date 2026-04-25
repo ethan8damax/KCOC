@@ -1,20 +1,17 @@
 // App.jsx — routes, tweaks, and mounts
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "welcomeImage": "field"
+  "welcomeImage": "sky"
 }/*EDITMODE-END*/;
 
 const HomePage = ({ tweaks }) => (
   <React.Fragment>
     <Hero />
     <WelcomeSection imageKey={tweaks.welcomeImage} />
-    <WhatToExpect />
     <ScriptureQuote
       text="Be still, and know that I am God."
       reference="Psalm 46:10"
     />
-    <SermonPreview />
     <BeliefsSnippet />
-    <GetInvolved />
     <CTABanner />
   </React.Fragment>
 );
@@ -37,7 +34,6 @@ const App = () => {
   let page;
   if (route === '#/about' || route === '#/beliefs') page = <AboutPage />;
   else if (route === '#/visit') page = <VisitPage />;
-  else if (route === '#/sermons') page = <SermonsPage />;
   else page = <HomePage tweaks={tweaks} />;
 
   return (
@@ -53,6 +49,7 @@ const App = () => {
           label="Image"
           value={tweaks.welcomeImage}
           options={[
+            { value: 'sky',    label: 'Blue sky with white clouds' },
             { value: 'field',  label: 'Open field, golden hour' },
             { value: 'meadow', label: 'Mountain meadow' },
             { value: 'porch',  label: 'Sunlit porch' },
